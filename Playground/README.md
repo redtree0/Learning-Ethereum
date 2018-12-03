@@ -77,6 +77,6 @@ https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubunt
 vagrant@ubuntu-bionic:~$ sudo apt-get install software-properties-common
 vagrant@ubuntu-bionic:~$ sudo add-apt-repository -y ppa:ethereum/ethereum
 vagrant@ubuntu-bionic:~$ sudo apt-get update
-vagrant@ubuntu-bionic:~$ sudo apt-get install ethereum
+vagrant@ubuntu-bionic:~$ sudo apt-get install ethereum -y
 ```
 

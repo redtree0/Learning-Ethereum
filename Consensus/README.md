@@ -6,6 +6,7 @@ https://github.com/ethereumbook/ethereumbook/blob/develop/14consensus.asciidoc
 
 https://ethereum.stackexchange.com/questions/268/ethereum-block-architecture
 
+https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed
 
 ## POW vs POS
 
@@ -53,11 +54,13 @@ From a block header there are 3 roots from 3 of these tries.
 
 
 
-- State Trie
+- State Trie : 머클 페트리샤 트리, 이더리움 계정 정보
 - Storage Trie
-- Transactions Trie : 머클트리, 트랜젝션 요청만에 대한 기록
-- Receipts Trie : 머클트리, 트랙젝션의 결과(output)만 기록
+- Transactions Trie : 머클 트리, 트랜젝션 요청만에 대한 기록
+- Receipts Trie : 머클 트리, 트랙젝션의 결과(output)만 기록
 
+
+![ethblockchain_oneblock](assets/blockstructure.jpeg)
 
 ![ethblockchain_oneblock](assets/ethblockchain_oneblock.png)
 

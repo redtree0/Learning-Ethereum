@@ -12,8 +12,14 @@ https://solidity.readthedocs.io/en/develop/miscellaneous.html#source-mappings
 
 https://github.com/ethereum/solidity/blob/develop/docs/miscellaneous.rst#source-mappings
 
+https://www.reddit.com/r/ethereum/comments/3k4h3w/basic_questions_about_the_ethereum_evm_and_state/
+
 
 EVM은 256 비트의 stack로 빅에디안 방식의 VM이다. 이더리움 블록체인에서 스마트 컨트렉트를 실행하는 가상 환경이다.
+
+
+사실, EVM은 정확하게는 가상머신이 아니다. EVM 어셈블리 언어를 처리하기 위한 인터프리터이다. stack, memory byte-array, contract's storage tree으로 구성되어 있으며 EVM bytecode가 실행되는 동안, EVM 메모리는 일시적으로 얻는다. 수행 후, 할당이 해제된다. 주로 CPU에서 L1 or L2 cache를 사용한다.
+
 
 ## contract compile 과정
 
@@ -121,3 +127,5 @@ contract.sol 예제를 compile 후 bytecode를 확인해보자.
 ![EVM opcode stop](assets/evm_stop.png)
 
 위와 마찬가지로, bytecode는 STOP(00)과 0x29(29)이 합쳐져 0029가 된다.
+
+

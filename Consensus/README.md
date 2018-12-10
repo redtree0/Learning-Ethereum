@@ -31,56 +31,6 @@ https://github.com/ethereum/wiki/wiki/Patricia-Tree
 https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial
 
 
-## Merkle Patricia Trie
-
-
-
-![merkletrie](assets/merkletrie.png)
-
-## Ethereum: Merkle Patricia Trie
-
-[Reference]
-
-https://blog.ethereum.org/2015/06/26/state-tree-pruning/
-
-
-All of the merkle tries in Ethereum use a Merkle Patricia Trie.
-
-From a block header there are 3 roots from 3 of these tries.
-
-- stateRoot
-- transactionsRoot
-- receiptsRoot
-
-
-
-- State Trie : 머클 페트리샤 트리, 이더리움 계정 정보
-- Storage Trie
-- Transactions Trie : 머클 트리, 트랜젝션 요청만에 대한 기록
-- Receipts Trie : 머클 트리, 트랙젝션의 결과(output)만 기록
-
-
-![ethblockchain_oneblock](assets/blockstructure.jpeg)
-
-![ethblockchain_oneblock](assets/ethblockchain_oneblock.png)
-
-
-![ethblockchain](assets/ethblockchain.png)
-
-
-![chain diagram](assets/chaindiag.png)
-
-![chain detail](assets/chaindetail.png)
-
-![chain detail](assets/ethtrie.png)
-
-
-
-
-
-
----
-
 ## Consensus via Proof of Stake (PoS)
 
 ## Casper: Ethereum’s POS Algorithm

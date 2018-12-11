@@ -6,17 +6,17 @@
 
 [리틀엔디안little-endian과-빅엔디안big-endian이해하기](http://www.packetinside.com/2010/10/리틀엔디안little-endian과-빅엔디안big-endian이해하기.html)
 
-https://media.readthedocs.org/pdf/solidity-cn/latest/solidity-cn.pdf
+[source-mappings](
+https://solidity.readthedocs.io/en/develop/miscellaneous.html#source-mappings)
 
-https://solidity.readthedocs.io/en/develop/miscellaneous.html#source-mappings
-
-https://github.com/ethereum/solidity/blob/develop/docs/miscellaneous.rst#source-mappings
-
-https://www.reddit.com/r/ethereum/comments/3k4h3w/basic_questions_about_the_ethereum_evm_and_state/
-
+[Basic Questions About the Ethereum EVM and State Storage](https://www.reddit.com/r/ethereum/comments/3k4h3w/basic_questions_about_the_ethereum_evm_and_state/)
 
 [ethereum_evm_illustrated](
 https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)
+
+[solidity-bytecode-and-opcode-basics](https://medium.com/@blockchain101/solidity-bytecode-and-opcode-basics-672e9b1a88c2)
+
+[Solidity Assembly](https://solidity.readthedocs.io/en/develop/assembly.html)
 
 EVM은 256 비트의 stack로 빅에디안 방식의 VM이다. 이더리움 블록체인에서 스마트 컨트렉트를 실행하는 가상 환경이다.
 
@@ -36,14 +36,14 @@ EVM의 실행 프로세스는 다음과 같다.
 
 컨트렉트가 컴파일 과정을 분석하기 전에 어셈블리 관점과 bytecode 관점에서 보자.
 
-EVM은 어셈블리코드와 bytecode ...
+어셈블리는 사람이 읽을 수 있는 low level언어이다. 이는 EVM에서는 Opcode라고 불린다. bytecode는 opcode로부터 생성된다.
 
 ![EVM assembly opcode](assets/assemble_opcode.png)
 
 solc로 컨트렉트가 컴파일 되는 과정은 다음과 같다.
 
-1. solc로 작성한 contract 컴파일
-2. contract는 opcode로 변환
+1. solc로 contract code 컴파일
+2. contract code는 opcode로 변환
 3. opcode는 bytecode로 변환
 
 간단한 테스트를 위해 [remix-ide](https://remix.ethereum.org)에서 다음 컨트렉트(contract.sol)를 컴파일 해보자.

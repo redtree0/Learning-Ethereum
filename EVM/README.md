@@ -2,9 +2,9 @@
 
 [Reference]
 
-https://ethervm.io
+[ethervm.io](https://ethervm.io)
 
-http://www.packetinside.com/2010/10/리틀엔디안little-endian과-빅엔디안big-endian이해하기.html
+[리틀엔디안little-endian과-빅엔디안big-endian이해하기](http://www.packetinside.com/2010/10/리틀엔디안little-endian과-빅엔디안big-endian이해하기.html)
 
 https://media.readthedocs.org/pdf/solidity-cn/latest/solidity-cn.pdf
 
@@ -15,13 +15,30 @@ https://github.com/ethereum/solidity/blob/develop/docs/miscellaneous.rst#source-
 https://www.reddit.com/r/ethereum/comments/3k4h3w/basic_questions_about_the_ethereum_evm_and_state/
 
 
+[ethereum_evm_illustrated](
+https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)
+
 EVM은 256 비트의 stack로 빅에디안 방식의 VM이다. 이더리움 블록체인에서 스마트 컨트렉트를 실행하는 가상 환경이다.
 
+EVM 구조이다.
 
-사실, EVM은 정확하게는 가상머신이 아니다. EVM 어셈블리 언어를 처리하기 위한 인터프리터이다. stack, memory byte-array, contract's storage tree으로 구성되어 있으며 EVM bytecode가 실행되는 동안, EVM 메모리는 일시적으로 얻는다. 수행 후, 할당이 해제된다. 주로 CPU에서 L1 or L2 cache를 사용한다.
+사실, EVM은 정확하게는 가상머신이 아니다. EVM 어셈블리 언어를 처리하기 위한 인터프리터이다. stack, memory byte-array, 컨트렉트 계정의 storage으로 구성되어 있다.
 
+![EVM Structure](assets/evm_structure.png)
+
+EVM의 실행 프로세스는 다음과 같다.
+
+ EVM bytecode가 실행되는 동안, EVM 메모리는 일시적으로 얻는다. 수행 후, 할당이 해제된다. 주로 CPU에서 L1 or L2 cache를 사용한다.
+
+![EVM process](assets/evm_process.png)
 
 ## contract compile 과정
+
+컨트렉트가 컴파일 과정을 분석하기 전에 어셈블리 관점과 bytecode 관점에서 보자.
+
+EVM은 어셈블리코드와 bytecode ...
+
+![EVM assembly opcode](assets/assemble_opcode.png)
 
 solc로 컨트렉트가 컴파일 되는 과정은 다음과 같다.
 

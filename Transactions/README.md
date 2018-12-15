@@ -42,32 +42,36 @@ storage가 해당 데이터가 갱신된다.
 
 [ethereum-signing-and-validating-13a2d7cb0ee3](https://medium.com/@angellopozo/ethereum-signing-and-validating-13a2d7cb0ee3)
 
+[web3](https://web3j.readthedocs.io/en/latest/transactions.html)
+
+[이더리움(Ethereum) 공부 #3 - 트랜잭션과 서명](https://steemit.com/busy/@anpigon/ethereum-3?sort=author_reputation)
+
 transation에는 
 
 nonce: 계정이 보낸 트랜젝션의 수 (mysql의 autoincrement라 생각해도 됨)
 
+gasPrice: 트랜젝션을 실행하는데 필요한 가스(단위 Wei)
 
-gasPrice: the number of Wei that the sender is willing to pay per unit of gas required to execute the transaction.
+gasLimit: gas의 최대 값
 
-
-gasLimit: the maximum amount of gas that the sender is willing to pay for executing this transaction. This amount is set and paid upfront, before any computation is done.
+nonce: EOA에 발급되는 트랜잭션 일련번호.
 
 to: 트랜젝션 받는 이의 주소이다.
 Message Call의 경우에 주소가 할당되어 있다.
 하지만, Contract Creation의 경우에는 컨트렉트 계정 주소가 아직 생성 전이기 때문에 0 값이 할당된다.
 
+value: 수신자에게 보내는 이더(ether) 개수
 
-value: the amount of Wei to be transferred from the sender to the recipient. In a contract-creating transaction, this value serves as the starting balance within the newly created contract account.
+data: 가변길이의 바이너리 데이터(payload)
 
+v, r, s: ECDSA 서명 구성 요소
 
-v, r, s: used to generate the signature that identifies the sender of the transaction.
-
-
-
-init (only exists for contract-creating transactions): An EVM code fragment that is used to initialize the new contract account. init is run only once, and then is discarded. When init is first run, it returns the body of the account code, which is the piece of code that is permanently associated with the contract account.
-
-
-data (optional field that only exists for message calls): 
-the input data (i.e. parameters) of the message call. For example, if a smart contract serves as a domain registration service, a call to that contract might expect input fields such as the domain and IP address.
 
 ![Transation Structure](assets/transaction_structure.png)
+
+
+web3와 ethereum 간에 트랜젝션 관계이다.
+
+![Web3](assets/web3.png)
+
+

@@ -12,13 +12,8 @@ var tx = require('ethereumjs-tx');
 var privateKeyString = "6ec6505db8f83f3ce836a5c8076e8c0f84b76a11553966a32986100d5141d588";
 
 var privateKey = "0x"+ privateKeyString;
-// var publicKey = util.bufferToHex(util.privateToPublic(privateKey));
-// var eoa = '0x' + util.bufferToHex(util.sha3(publicKey));
-// var address = '0x' + util.bufferToHex(util.sha3(publicKey).slice(26));
 var publicKey = util.privateToPublic(privateKey);
-console.log(publicKey.toString("Hex"));
 var address = util.privateToAddress(privateKey);
-console.log(address.toString("Hex"));
 
 function getBinarySize(string) {
     return Buffer.byteLength(string, 'utf8');
@@ -28,15 +23,12 @@ function getBitSize(string){
     return getBinarySize(string) * 8;
 }
 
-// console.log(" ===== privateKey ====== ");
-// console.log("Data : " + privateKey);
-// console.log("Length : " + privateKey.length);
-// console.log(" ===== publicKey ====== ");
-// console.log("Data : " + publicKey);
-// console.log("Length : " + publicKey.length);
-// console.log(" ===== Address ====== ");
-// console.log("Data : " + address);
-// console.log("Length : " + address.length);
+console.log(" ===== privateKey ====== ");
+console.log("Data : " + privateKey);
 console.log(" Bit Size : " +  getBitSize(privateKeyString));
+console.log(" ===== publicKey ====== ");
+console.log("Data : 0x" + publicKey.toString("Hex"));
 console.log(" Bit Size : " +  getBitSize(publicKey));
+console.log(" ===== Address ====== ");
+console.log("Data : 0x" + address.toString("Hex"));
 console.log(" Bit Size : " +  getBitSize(address));

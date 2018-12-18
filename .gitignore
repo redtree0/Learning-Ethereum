@@ -1,2 +1,6 @@
 Playground/*.log
 Playground/.vagrant
+
+Accounts/src/node_modules
+Accounts/src/package-lock.json
+
